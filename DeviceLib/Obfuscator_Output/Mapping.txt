@@ -1,0 +1,73 @@
+Renamed Types:
+
+Skipped Types:
+
+[DeviceLib]System.Runtime.CompilerServices.NullableAttribute skipped:  HidePrivateApi option in configuration
+{
+
+	[DeviceLib]System.Runtime.CompilerServices.NullableAttribute::.ctor[1]( [System.Runtime]System.Byte ) skipped:  special name
+	[DeviceLib]System.Runtime.CompilerServices.NullableAttribute::.ctor[1]( [System.Runtime]System.Byte[] ) skipped:  special name
+
+
+	System.Byte[] [DeviceLib]System.Byte[] System.Runtime.CompilerServices.NullableAttribute::NullableFlags skipped:  HidePrivateApi option in configuration
+}
+
+[DeviceLib]System.Runtime.CompilerServices.NullableContextAttribute skipped:  HidePrivateApi option in configuration
+{
+
+	[DeviceLib]System.Runtime.CompilerServices.NullableContextAttribute::.ctor[1]( [System.Runtime]System.Byte ) skipped:  special name
+
+
+	System.Byte [DeviceLib]System.Byte System.Runtime.CompilerServices.NullableContextAttribute::Flag skipped:  HidePrivateApi option in configuration
+}
+
+[DeviceLib]DeviceLib.Device skipped:  KeepPublicApi option in configuration
+{
+
+	[DeviceLib]DeviceLib.Device::GetIPAddress[0]( ) skipped:  KeepPublicApi option in configuration
+	[DeviceLib]DeviceLib.Device::GetExtIPAddress[0]( ) skipped:  KeepPublicApi option in configuration
+	[DeviceLib]DeviceLib.Device::CheckIP[0]( ) skipped:  KeepPublicApi option in configuration
+	[DeviceLib]DeviceLib.Device::IgnoreBadCertificates[0]( ) skipped:  KeepPublicApi option in configuration
+	[DeviceLib]DeviceLib.Device::AcceptAllCertifications[4]( [System.Runtime]System.Object, [System.Security.Cryptography.X509Certificates]System.Security.Cryptography.X509Certificates.X509Certificate, [System.Security.Cryptography.X509Certificates]System.Security.Cryptography.X509Certificates.X509Chain, [System.Net.Primitives]System.Net.Security.SslPolicyErrors ) skipped:  HidePrivateApi option in configuration
+	[DeviceLib]DeviceLib.Device::.ctor[0]( ) skipped:  special name
+
+
+	System.String [DeviceLib]System.String DeviceLib.Device::ALLOWED_EXT_IP skipped:  HidePrivateApi option in configuration
+	System.String[] [DeviceLib]System.String[] DeviceLib.Device::ALLOWED_INT_IP skipped:  HidePrivateApi option in configuration
+}
+
+[DeviceLib]DeviceLib.RES skipped:  HidePrivateApi option in configuration
+{
+
+	[DeviceLib]DeviceLib.RES::get_ResourceManager[0]( ) skipped:  skip by property
+	[DeviceLib]DeviceLib.RES::get_Culture[0]( ) skipped:  skip by property
+	[DeviceLib]DeviceLib.RES::set_Culture[1]( [System.Runtime]System.Globalization.CultureInfo ) skipped:  skip by property
+	[DeviceLib]DeviceLib.RES::get_EXT_IP[0]( ) skipped:  skip by property
+	[DeviceLib]DeviceLib.RES::get_INT_IP1[0]( ) skipped:  skip by property
+	[DeviceLib]DeviceLib.RES::get_INT_IP2[0]( ) skipped:  skip by property
+	[DeviceLib]DeviceLib.RES::.ctor[0]( ) skipped:  special name
+
+
+	System.Resources.ResourceManager [DeviceLib]System.Resources.ResourceManager DeviceLib.RES::resourceMan skipped:  HidePrivateApi option in configuration
+	System.Globalization.CultureInfo [DeviceLib]System.Globalization.CultureInfo DeviceLib.RES::resourceCulture skipped:  HidePrivateApi option in configuration
+
+
+	System.Resources.ResourceManager [DeviceLib]System.Resources.ResourceManager DeviceLib.RES::ResourceManager skipped:  HidePrivateApi option in configuration
+	System.Globalization.CultureInfo [DeviceLib]System.Globalization.CultureInfo DeviceLib.RES::Culture skipped:  HidePrivateApi option in configuration
+	System.String [DeviceLib]System.String DeviceLib.RES::EXT_IP skipped:  HidePrivateApi option in configuration
+	System.String [DeviceLib]System.String DeviceLib.RES::INT_IP1 skipped:  HidePrivateApi option in configuration
+	System.String [DeviceLib]System.String DeviceLib.RES::INT_IP2 skipped:  HidePrivateApi option in configuration
+}
+
+[DeviceLib]Microsoft.CodeAnalysis.EmbeddedAttribute skipped:  HidePrivateApi option in configuration
+{
+
+	[DeviceLib]Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor[0]( ) skipped:  special name
+}
+
+Renamed Resources:
+
+
+Skipped Resources:
+
+DeviceLib.RES.resources (HidePrivateApi option in configuration)

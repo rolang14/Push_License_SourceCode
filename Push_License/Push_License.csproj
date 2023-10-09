@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>L_ICO.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\GmarketSansBold.ttf" />
+    <None Remove="Fonts\GmarketSansLight.ttf" />
+    <None Remove="Fonts\GmarketSansMedium.ttf" />
+    <None Remove="Fonts\GodoB.ttf" />
+    <None Remove="Fonts\GodoM.ttf" />
+    <None Remove="Fonts\KoPub-Bold.otf" />
+    <None Remove="Fonts\KoPub-Light.otf" />
+    <None Remove="Fonts\KoPub-Medium.otf" />
+    <None Remove="Fonts\Yangjin.ttf" />
+    <None Remove="Images\L%28128X128%29.png" />
+    <None Remove="Images\L%28256X256%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\GmarketSansBold.ttf" />
+    <Resource Include="Fonts\GmarketSansLight.ttf" />
+    <Resource Include="Fonts\GmarketSansMedium.ttf" />
+    <Resource Include="Fonts\GodoB.ttf" />
+    <Resource Include="Fonts\GodoM.ttf" />
+    <Resource Include="Fonts\KoPub-Bold.otf" />
+    <Resource Include="Fonts\KoPub-Light.otf" />
+    <Resource Include="Fonts\KoPub-Medium.otf" />
+    <Resource Include="Fonts\Yangjin.ttf" />
+    <Resource Include="Images\L(128X128).png" />
+    <Resource Include="Images\L(256X256).png" />
+    <Content Include="L_ICO.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WebSocketSharp-netstandard" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ConnectLib">
+      <HintPath>lib\ConnectLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceLib">
+      <HintPath>lib\DeviceLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;$(ProjectDir)lib\DeviceLib.dll&quot; &quot;$(ProjectDir)$(OutDir)&quot;&#xD;&#xA;copy &quot;$(ProjectDir)lib\ConnectLib.dll&quot; &quot;$(ProjectDir)$(OutDir)&quot;" />
+  </Target>
+
+</Project>

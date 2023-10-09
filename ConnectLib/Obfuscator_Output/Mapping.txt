@@ -1,0 +1,273 @@
+Renamed Types:
+
+Skipped Types:
+
+[ConnectLib]System.Runtime.CompilerServices.NullableAttribute skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]System.Runtime.CompilerServices.NullableAttribute::.ctor[1]( [System.Runtime]System.Byte ) skipped:  special name
+	[ConnectLib]System.Runtime.CompilerServices.NullableAttribute::.ctor[1]( [System.Runtime]System.Byte[] ) skipped:  special name
+
+
+	System.Byte[] [ConnectLib]System.Byte[] System.Runtime.CompilerServices.NullableAttribute::NullableFlags skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]System.Runtime.CompilerServices.NullableContextAttribute skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]System.Runtime.CompilerServices.NullableContextAttribute::.ctor[1]( [System.Runtime]System.Byte ) skipped:  special name
+
+
+	System.Byte [ConnectLib]System.Byte System.Runtime.CompilerServices.NullableContextAttribute::Flag skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect skipped:  KeepPublicApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect::get_Instance[0]( ) skipped:  skip by property
+	[ConnectLib]ConnectLib.Connect::_wsLoginSend[2]( [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
+	[ConnectLib]ConnectLib.Connect::_wsCheckCompanyCode[2]( [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
+	[ConnectLib]ConnectLib.Connect::_wsCheckLicenseKey[3]( [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
+	[ConnectLib]ConnectLib.Connect::_wsLicenseInput[6]( [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.Int32, [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
+	[ConnectLib]ConnectLib.Connect::.ctor[0]( ) skipped:  special name
+
+
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect::instance skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect::wsAddr skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect::t_timeout_str skipped:  KeepPublicApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect::c_timeout_str skipped:  KeepPublicApi option in configuration
+	DeviceLib.Device [ConnectLib]DeviceLib.Device ConnectLib.Connect::devlib skipped:  HidePrivateApi option in configuration
+
+
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect::Instance skipped:  KeepPublicApi option in configuration
+}
+
+[ConnectLib]ConnectLib.RES skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.RES::get_ResourceManager[0]( ) skipped:  skip by property
+	[ConnectLib]ConnectLib.RES::get_Culture[0]( ) skipped:  skip by property
+	[ConnectLib]ConnectLib.RES::set_Culture[1]( [System.Runtime]System.Globalization.CultureInfo ) skipped:  skip by property
+	[ConnectLib]ConnectLib.RES::get_CONN_TIME_OUT[0]( ) skipped:  skip by property
+	[ConnectLib]ConnectLib.RES::get_SERV_WS_CONFIG[0]( ) skipped:  skip by property
+	[ConnectLib]ConnectLib.RES::get_TSK_TIME_OUT[0]( ) skipped:  skip by property
+	[ConnectLib]ConnectLib.RES::.ctor[0]( ) skipped:  special name
+
+
+	System.Resources.ResourceManager [ConnectLib]System.Resources.ResourceManager ConnectLib.RES::resourceMan skipped:  HidePrivateApi option in configuration
+	System.Globalization.CultureInfo [ConnectLib]System.Globalization.CultureInfo ConnectLib.RES::resourceCulture skipped:  HidePrivateApi option in configuration
+
+
+	System.Resources.ResourceManager [ConnectLib]System.Resources.ResourceManager ConnectLib.RES::ResourceManager skipped:  HidePrivateApi option in configuration
+	System.Globalization.CultureInfo [ConnectLib]System.Globalization.CultureInfo ConnectLib.RES::Culture skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.RES::CONN_TIME_OUT skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.RES::SERV_WS_CONFIG skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.RES::TSK_TIME_OUT skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_0 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_0::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_0::<_wsLicenseInput>b__1[2]( [System.Runtime]System.Object, [websocket-sharp]WebSocketSharp.MessageEventArgs ) skipped:  HidePrivateApi option in configuration
+
+
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<>c__DisplayClass10_0::<>4__this skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass10_0::companyCode skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass10_0::licenseKey skipped:  HidePrivateApi option in configuration
+	System.Int32 [ConnectLib]System.Int32 ConnectLib.Connect/<>c__DisplayClass10_0::licenseCount skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass10_0::start skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass10_0::end skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass10_0::licenseType skipped:  HidePrivateApi option in configuration
+	System.String[] [ConnectLib]System.String[] ConnectLib.Connect/<>c__DisplayClass10_0::res skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.TaskCompletionSource`1<System.String[]> [ConnectLib]System.Threading.Tasks.TaskCompletionSource`1<System.String[]> ConnectLib.Connect/<>c__DisplayClass10_0::tcs skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_1 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_1::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_1::<_wsLicenseInput>b__0[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_1::<_wsLicenseInput>b__2[0]( ) skipped:  HidePrivateApi option in configuration
+
+
+	WebSocketSharp.WebSocket [ConnectLib]WebSocketSharp.WebSocket ConnectLib.Connect/<>c__DisplayClass10_1::ws skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass10_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_0 ConnectLib.Connect/<>c__DisplayClass10_1::CS$<>8__locals1 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_0 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_0::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_0::<_wsLoginSend>b__1[2]( [System.Runtime]System.Object, [websocket-sharp]WebSocketSharp.MessageEventArgs ) skipped:  HidePrivateApi option in configuration
+
+
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<>c__DisplayClass7_0::<>4__this skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass7_0::id skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass7_0::password skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass7_0::result skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.TaskCompletionSource`1<System.String> [ConnectLib]System.Threading.Tasks.TaskCompletionSource`1<System.String> ConnectLib.Connect/<>c__DisplayClass7_0::tcs skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_1 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_1::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_1::<_wsLoginSend>b__0[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_1::<_wsLoginSend>b__2[0]( ) skipped:  HidePrivateApi option in configuration
+
+
+	WebSocketSharp.WebSocket [ConnectLib]WebSocketSharp.WebSocket ConnectLib.Connect/<>c__DisplayClass7_1::ws skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass7_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_0 ConnectLib.Connect/<>c__DisplayClass7_1::CS$<>8__locals1 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_0 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_0::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_0::<_wsCheckCompanyCode>b__1[2]( [System.Runtime]System.Object, [websocket-sharp]WebSocketSharp.MessageEventArgs ) skipped:  HidePrivateApi option in configuration
+
+
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass8_0::companyCode skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass8_0::licenseType skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<>c__DisplayClass8_0::<>4__this skipped:  HidePrivateApi option in configuration
+	System.String[] [ConnectLib]System.String[] ConnectLib.Connect/<>c__DisplayClass8_0::res skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.TaskCompletionSource`1<System.String[]> [ConnectLib]System.Threading.Tasks.TaskCompletionSource`1<System.String[]> ConnectLib.Connect/<>c__DisplayClass8_0::tcs skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_1 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_1::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_1::<_wsCheckCompanyCode>b__0[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_1::<_wsCheckCompanyCode>b__2[0]( ) skipped:  HidePrivateApi option in configuration
+
+
+	WebSocketSharp.WebSocket [ConnectLib]WebSocketSharp.WebSocket ConnectLib.Connect/<>c__DisplayClass8_1::ws skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass8_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_0 ConnectLib.Connect/<>c__DisplayClass8_1::CS$<>8__locals1 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_0 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_0::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_0::<_wsCheckLicenseKey>b__1[2]( [System.Runtime]System.Object, [websocket-sharp]WebSocketSharp.MessageEventArgs ) skipped:  HidePrivateApi option in configuration
+
+
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass9_0::companyCode skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass9_0::licenseKey skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass9_0::licenseType skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<>c__DisplayClass9_0::<>4__this skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<>c__DisplayClass9_0::res skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.TaskCompletionSource`1<System.String> [ConnectLib]System.Threading.Tasks.TaskCompletionSource`1<System.String> ConnectLib.Connect/<>c__DisplayClass9_0::tcs skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_1 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_1::.ctor[0]( ) skipped:  special name
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_1::<_wsCheckLicenseKey>b__0[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_1::<_wsCheckLicenseKey>b__2[0]( ) skipped:  HidePrivateApi option in configuration
+
+
+	WebSocketSharp.WebSocket [ConnectLib]WebSocketSharp.WebSocket ConnectLib.Connect/<>c__DisplayClass9_1::ws skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass9_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_0 ConnectLib.Connect/<>c__DisplayClass9_1::CS$<>8__locals1 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<_wsCheckCompanyCode>d__8 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<_wsCheckCompanyCode>d__8::MoveNext[0]( ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<_wsCheckCompanyCode>d__8::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  HidePrivateApi option in configuration
+
+
+	System.Int32 [ConnectLib]System.Int32 ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>1__state skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String[]> [ConnectLib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String[]> ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>t__builder skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsCheckCompanyCode>d__8::companyCode skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsCheckCompanyCode>d__8::licenseType skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>4__this skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass8_1 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_1 ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>8__1 skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass8_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass8_0 ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>8__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.CancellationTokenSource [ConnectLib]System.Threading.CancellationTokenSource ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<cts>5__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.Task [ConnectLib]System.Threading.Tasks.Task ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<connectTask>5__3 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>u__1 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String[]> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.String[]> ConnectLib.Connect/<_wsCheckCompanyCode>d__8::<>u__2 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<_wsCheckLicenseKey>d__9 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<_wsCheckLicenseKey>d__9::MoveNext[0]( ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<_wsCheckLicenseKey>d__9::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  HidePrivateApi option in configuration
+
+
+	System.Int32 [ConnectLib]System.Int32 ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>1__state skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String> [ConnectLib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String> ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>t__builder skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsCheckLicenseKey>d__9::companyCode skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsCheckLicenseKey>d__9::licenseKey skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsCheckLicenseKey>d__9::licenseType skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>4__this skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass9_1 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_1 ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>8__1 skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass9_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass9_0 ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>8__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.CancellationTokenSource [ConnectLib]System.Threading.CancellationTokenSource ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<cts>5__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.Task [ConnectLib]System.Threading.Tasks.Task ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<connectTask>5__3 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>u__1 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> ConnectLib.Connect/<_wsCheckLicenseKey>d__9::<>u__2 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<_wsLicenseInput>d__10 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<_wsLicenseInput>d__10::MoveNext[0]( ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<_wsLicenseInput>d__10::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  HidePrivateApi option in configuration
+
+
+	System.Int32 [ConnectLib]System.Int32 ConnectLib.Connect/<_wsLicenseInput>d__10::<>1__state skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String[]> [ConnectLib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String[]> ConnectLib.Connect/<_wsLicenseInput>d__10::<>t__builder skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<_wsLicenseInput>d__10::<>4__this skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLicenseInput>d__10::companyCode skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLicenseInput>d__10::licenseKey skipped:  HidePrivateApi option in configuration
+	System.Int32 [ConnectLib]System.Int32 ConnectLib.Connect/<_wsLicenseInput>d__10::licenseCount skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLicenseInput>d__10::start skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLicenseInput>d__10::end skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLicenseInput>d__10::licenseType skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass10_1 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_1 ConnectLib.Connect/<_wsLicenseInput>d__10::<>8__1 skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass10_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass10_0 ConnectLib.Connect/<_wsLicenseInput>d__10::<>8__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.CancellationTokenSource [ConnectLib]System.Threading.CancellationTokenSource ConnectLib.Connect/<_wsLicenseInput>d__10::<cts>5__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.Task [ConnectLib]System.Threading.Tasks.Task ConnectLib.Connect/<_wsLicenseInput>d__10::<connectTask>5__3 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> ConnectLib.Connect/<_wsLicenseInput>d__10::<>u__1 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String[]> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.String[]> ConnectLib.Connect/<_wsLicenseInput>d__10::<>u__2 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]ConnectLib.Connect/<_wsLoginSend>d__7 skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]ConnectLib.Connect/<_wsLoginSend>d__7::MoveNext[0]( ) skipped:  HidePrivateApi option in configuration
+	[ConnectLib]ConnectLib.Connect/<_wsLoginSend>d__7::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  HidePrivateApi option in configuration
+
+
+	System.Int32 [ConnectLib]System.Int32 ConnectLib.Connect/<_wsLoginSend>d__7::<>1__state skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String> [ConnectLib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.String> ConnectLib.Connect/<_wsLoginSend>d__7::<>t__builder skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect [ConnectLib]ConnectLib.Connect ConnectLib.Connect/<_wsLoginSend>d__7::<>4__this skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLoginSend>d__7::id skipped:  HidePrivateApi option in configuration
+	System.String [ConnectLib]System.String ConnectLib.Connect/<_wsLoginSend>d__7::password skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass7_1 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_1 ConnectLib.Connect/<_wsLoginSend>d__7::<>8__1 skipped:  HidePrivateApi option in configuration
+	ConnectLib.Connect/<>c__DisplayClass7_0 [ConnectLib]ConnectLib.Connect/<>c__DisplayClass7_0 ConnectLib.Connect/<_wsLoginSend>d__7::<>8__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.CancellationTokenSource [ConnectLib]System.Threading.CancellationTokenSource ConnectLib.Connect/<_wsLoginSend>d__7::<cts>5__2 skipped:  HidePrivateApi option in configuration
+	System.Threading.Tasks.Task [ConnectLib]System.Threading.Tasks.Task ConnectLib.Connect/<_wsLoginSend>d__7::<connectTask>5__3 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> ConnectLib.Connect/<_wsLoginSend>d__7::<>u__1 skipped:  HidePrivateApi option in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [ConnectLib]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> ConnectLib.Connect/<_wsLoginSend>d__7::<>u__2 skipped:  HidePrivateApi option in configuration
+}
+
+[ConnectLib]Microsoft.CodeAnalysis.EmbeddedAttribute skipped:  HidePrivateApi option in configuration
+{
+
+	[ConnectLib]Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor[0]( ) skipped:  special name
+}
+
+Renamed Resources:
+
+
+Skipped Resources:
+
+ConnectLib.RES.resources (HidePrivateApi option in configuration)

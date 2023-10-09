@@ -1,0 +1,161 @@
+﻿<Window x:Class="Push_License.View.LoginView"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:local="clr-namespace:Push_License.View"
+        xmlns:viewModel="clr-namespace:Push_License.ViewModel"
+        
+        Title="Push License" Height="590" Width="360"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="CanMinimize">
+
+    <Window.DataContext>
+        <viewModel:LoginViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
+    </Window.Visibility>
+    
+    <Border CornerRadius="3"
+            BorderThickness="0.5"
+            Opacity="0.95"
+            BorderBrush="{StaticResource MainThemeColor2}"
+            Background="{StaticResource MainThemeColor3}">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:Name="pnlControlBar"
+                            Orientation="Horizontal"
+                            Background="Transparent"
+                            VerticalAlignment="Top"
+                            Height="20"
+                            Margin="0,0,5,0"
+                            FlowDirection="RightToLeft"
+                            MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown"
+                            MouseEnter="pnlControlBar_MouseEnter"
+                            MouseLeave="pnlControlBar_MouseLeave"
+                            Grid.Row="0">
+
+                    <Button x:Name="btnClose"
+                            Style="{StaticResource controlButton}"
+                            Tag="{StaticResource MainThemeColor3}"
+                            Click="btnClose_Click">
+                        <fa:IconImage Icon="WindowClose"
+                                      Style="{StaticResource controlButtonIcon}"/>
+
+                    </Button>
+
+                    <Button x:Name="btnMinimize"
+                            Style="{StaticResource controlButton}"
+                            Tag="{StaticResource MainThemeColor3}"
+                            Click="btnMinimize_Click">
+                        <fa:IconImage Icon="WindowMinimize"
+                                      Style="{StaticResource controlButtonIcon}"/>
+                    </Button>
+
+                </StackPanel>
+
+                <StackPanel x:Name="pnlLoginICON"
+                            Orientation="Horizontal"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,0"
+                            Grid.Row="1">
+
+                    <Image Source="/Images/L(256X256).png"
+                           Height="100"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <StackPanel x:Name="pnlLoginTextBox"
+                            Orientation="Vertical"
+                            Background="Transparent"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,0"
+                            Grid.Row="0">
+                    
+                    <TextBox x:Name="txtLoginId"
+                             Style="{StaticResource inputIdField}"
+                             Margin="0,0,0,0"
+                             Padding="5,5,5,5"
+                             TextChanged="txtLoginId_TextChanged">
+                    </TextBox>
+
+                    <PasswordBox x:Name="txtLoginPW"
+                                Style="{StaticResource inputPassField}"
+                                Margin="0,0,0,0"
+                                Padding="5,5,5,5"
+                                PasswordChanged="txtLoginPW_PasswordChanged">
+                    </PasswordBox>
+
+                    <Button x:Name="btnLogin"
+                            Style="{StaticResource squareButton}"
+                            Margin="0,15,0,0"
+                            IsEnabled="{Binding IsLoginEnabled}"
+                            Content="로그인"
+                            FontSize="12"
+                            FontFamily="/Fonts/#Gmarket Sans TTF Meduim"
+                            Command="{Binding LoginCommand, Mode=OneWay}">
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel x:Name="pnlLoginBtn"
+                            Orientation="Vertical"
+                            Background="Transparent"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,0"
+                            Grid.Row="0">
+                </StackPanel>
+
+                <StackPanel x:Name="pnlLoginBottom"
+                            Orientation="Vertical"
+                            Background="Transparent"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Center"
+                            Margin="0,5,0,5"
+                            Grid.Row="1">
+
+                        <TextBlock Text="Copyright @ DSTECH Co.,Ltd." 
+                                   FontSize="10"
+                                   Style="{StaticResource TextGmarketM}"/>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>

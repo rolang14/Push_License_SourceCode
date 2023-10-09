@@ -1,0 +1,221 @@
+﻿<UserControl x:Class="Push_License.View.LicenseView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Push_License.View" 
+      xmlns:validation="clr-namespace:Push_License.Core.Validation"
+             
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+      xmlns:viewModel="clr-namespace:Push_License.ViewModel"
+             
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="500">
+
+    <UserControl.DataContext>
+        <viewModel:LicenseViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <Border Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="380"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <StackPanel x:Name="pnlLicenseInput"
+                                Orientation="Vertical"
+                                Background="Transparent"
+                                VerticalAlignment="Top"
+                                Margin="0,0,0,0"
+                                FlowDirection="LeftToRight">
+
+                        <TextBlock Text="1. 라이선스 생성"
+                                   Style="{StaticResource TextGmarketM}"
+                                   Margin="15,15,0,0"
+                                   FontSize="14"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0">
+                                <StackPanel Margin="20,10,0,0">
+                                    <Separator Style="{StaticResource MaterialDesignLightSeparator}" Background="LightGray" />
+                                    <TextBox materialDesign:HintAssist.Hint="CompanyCode"
+                                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="{StaticResource MainThemeColor3}"
+                                             materialDesign:TextFieldAssist.UnderlineBrush="{StaticResource MainThemeColor3}"
+                                             materialDesign:HintAssist.Foreground="{StaticResource MainThemeColor3_Darker}"
+                                             TextChanged="txtCompanyCode_TextChanged"
+                                             materialDesign:ValidationAssist.Background="Transparent">
+                                        <TextBox.Text>
+                                            <Binding Path="CompanyCode"  UpdateSourceTrigger="PropertyChanged" TargetNullValue="">
+                                                <Binding.ValidationRules>
+                                                    <validation:NotEmptyValidationRule PropertyName="CompanyCode"
+                                                        ValidatesOnTargetUpdated="True"/>
+                                                    <validation:CompanyCodeValidationRule PropertyName="CompanyCode"
+                                                        ValidatesOnTargetUpdated="True"/>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                    <StackPanel VerticalAlignment="Bottom">
+                                        <TextBlock Text="{Binding CompanyCodeMessage}"
+                                                   FontSize="10"
+                                                   Margin="0, 2, 0, -20"
+                                                   Foreground="{StaticResource MainThemeColor3}"
+                                                   HorizontalAlignment="Left">
+                                        </TextBlock>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                        <TextBox materialDesign:HintAssist.Hint="LicenseKey"
+                                             HorizontalAlignment="Left" Width="150"
+                                             IsEnabled="{Binding IsAvailableInputLicenseKey}"
+                                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="{StaticResource MainThemeColor3}"
+                                             materialDesign:TextFieldAssist.UnderlineBrush="{StaticResource MainThemeColor3}"
+                                             materialDesign:HintAssist.Foreground="{StaticResource MainThemeColor3_Darker}"
+                                             TextChanged="txtLicenseKey_TextChanged"
+                                             materialDesign:ValidationAssist.Background="Transparent">
+                                            <TextBox.Text>
+                                                <Binding Path="LicenseKey"  UpdateSourceTrigger="PropertyChanged" TargetNullValue="">
+                                                    <Binding.ValidationRules>
+                                                        <validation:NotEmptyValidationRule PropertyName="LicenseKey"
+                                                                                        ValidatesOnTargetUpdated="True"/>
+                                                        <validation:NotOverThreeLetterValidationRule PropertyName="LicenseKey"
+                                                                                                  ValidatesOnTargetUpdated="True"/>
+                                                        <validation:BeUpperAlphabetValidationRule PropertyName="LicenseKey"
+                                                                                               ValidatesOnTargetUpdated="True"/>
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+
+                                        <TextBox materialDesign:HintAssist.Hint="Count" Margin="20,0,0,0"
+                                             HorizontalAlignment="Left" Width="110"
+                                             IsEnabled="{Binding IsAvailableInputLicenseCount}"
+                                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="{StaticResource MainThemeColor3}"
+                                             materialDesign:TextFieldAssist.UnderlineBrush="{StaticResource MainThemeColor3}"
+                                             materialDesign:HintAssist.Foreground="{StaticResource MainThemeColor3_Darker}"
+                                             TextChanged="txtLicenseCount_TextChanged"
+                                             materialDesign:ValidationAssist.Background="Transparent">
+                                            <TextBox.Text>
+                                                <Binding Path="LicenseCount"  UpdateSourceTrigger="PropertyChanged" TargetNullValue="">
+                                                    <Binding.ValidationRules>
+                                                        <validation:NotEmptyValidationRule PropertyName="LicenseCount"
+                                                                                        ValidatesOnTargetUpdated="True"/>
+                                                        <validation:NotOverThreeLetterValidationRule PropertyName="LicenseCount"
+                                                                                                  ValidatesOnTargetUpdated="True"/>
+                                                        <validation:BeNumberValidationRule PropertyName="LicenseCount"
+                                                                                               ValidatesOnTargetUpdated="True"/>
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                                        <TextBlock Text="{Binding LicenseKeyMessage}"
+                                                   FontSize="10"
+                                                   Margin="0, 2, 0, -20"
+                                                   Foreground="{StaticResource MainThemeColor3}"
+                                                   HorizontalAlignment="Left">
+                                        </TextBlock>
+                                    </StackPanel>
+
+                                    <DatePicker materialDesign:HintAssist.Hint="Start Date" Margin="0,25,0,0"
+                                                SelectedDate="{Binding Start, UpdateSourceTrigger=PropertyChanged}"
+                                                materialDesign:ValidationAssist.Background="Transparent">
+                                        <DatePicker.Resources>
+                                            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource secondaryBackColor1}"/>
+                                        </DatePicker.Resources>
+                                        
+                                    </DatePicker>
+                                    
+                                    <DatePicker materialDesign:HintAssist.Hint="End Date" Margin="0,25,0,0"
+                                                materialDesign:TextFieldAssist.UnderlineBrush="{StaticResource MainThemeColor3}"
+                                                SelectedDate="{Binding Path=End, UpdateSourceTrigger=PropertyChanged}"
+                                                materialDesign:ValidationAssist.Background="Transparent">
+                                        <DatePicker.Resources>
+                                            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource secondaryBackColor1}"/>
+                                        </DatePicker.Resources>
+                                        <!--<DatePicker.CalendarStyle>
+                                            <Style TargetType="Calendar" BasedOn="{StaticResource MaterialDesignCalendarPortrait}">
+                                                <Style.Resources>
+                                                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource secondaryBackColor1}"/>
+                                                    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource secondaryBackColor2}"/>
+                                                </Style.Resources>
+                                            </Style>
+                                        </DatePicker.CalendarStyle>-->
+                                    </DatePicker>
+                                    
+                                    <ComboBox materialDesign:HintAssist.Hint="License Type" 
+                                              IsEditable="False" Margin="0 15 0 0"
+                                              Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                              materialDesign:TextFieldAssist.UnderlineBrush="{StaticResource MainThemeColor3}"
+                                              materialDesign:HintAssist.Foreground="{StaticResource MainThemeColor3_Darker}"
+                                              SelectedIndex="{Binding Path=LicenseType, UpdateSourceTrigger=PropertyChanged}">
+                                        <ComboBoxItem Content="License 1"/>
+                                        <ComboBoxItem Content="License 2"/>
+                                        <ComboBoxItem Content="License 3"/>
+                                    </ComboBox>
+
+
+                                    <Button Command="{Binding LicenseCreateCommand, Mode=OneWay}" Content="Create License" IsEnabled="{Binding IsLicenseCreateEnabled}"
+                                            BorderBrush="{StaticResource MainThemeColor3_Brighter}" Background="{StaticResource MainThemeColor3}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="75,20,0,0">
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <StackPanel Orientation="Vertical"
+                                            VerticalAlignment="Top"
+                                            HorizontalAlignment="Left">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Command="{Binding CompanyCodeCheckCommand, Mode=OneWay}" 
+                                            Margin="10, 35, 0, 0" Padding="5,0,5,0" Width="30"
+                                            BorderBrush="{StaticResource MainThemeColor3_Brighter}" Background="{StaticResource MainThemeColor3}"
+                                            IsEnabled="{Binding IsCompanyCodeEnabled}">
+                                            <Button.Content>
+                                                <fa:IconImage Icon="Search" Style="{StaticResource menuButtonIcon}"
+                                                          Foreground="White" Height="20" Width="20"/>
+                                            </Button.Content>
+                                            <Button.ToolTip>
+                                                <StackPanel>
+                                                    <TextBlock>동일한 CompanyCode가 있는지 검색합니다.</TextBlock>
+                                                </StackPanel>
+                                            </Button.ToolTip>
+                                        </Button>
+                                    </StackPanel>
+
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Command="{Binding LicenseKeyCheckCommand, Mode=OneWay}" 
+                                            Margin="10, 20, 0, 0" Padding="5,0,5,0" Width="30"
+                                            BorderBrush="{StaticResource MainThemeColor3_Brighter}" Background="{StaticResource MainThemeColor3}"
+                                            IsEnabled="{Binding IsLicenseKeyEnabled}">
+                                            <Button.Content>
+                                                <fa:IconImage Icon="Search" Style="{StaticResource menuButtonIcon}" 
+                                                          Foreground="White" Height="20" Width="20"/>
+                                            </Button.Content>
+                                            <Button.ToolTip>
+                                                <StackPanel>
+                                                    <TextBlock>입력된 CompanyCode의 최신 LicenseKey를 확인합니다.</TextBlock>
+                                                </StackPanel>
+                                            </Button.ToolTip>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+        </Border>
+    </Grid>
+</UserControl>

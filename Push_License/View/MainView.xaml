@@ -1,0 +1,145 @@
+﻿<Window x:Class="Push_License.View.MainView"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Push_License.View"
+        mc:Ignorable="d"
+        
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:viewModel="clr-namespace:Push_License.ViewModel"
+        
+        Title="Push License" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="CanMinimize">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:InitialViewModel}">
+            <local:InitialView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:LicenseViewModel}">
+            <local:LicenseView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:SearchViewModel}">
+            <local:SearchView/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Border CornerRadius="3"
+            BorderThickness="0.5"
+            Opacity="0.95"
+            BorderBrush="{StaticResource MainThemeColor2}"
+            Background="White">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel x:Name="pnlControlBar"
+                            Orientation="Horizontal"
+                            Background="Transparent"
+                            VerticalAlignment="Top"
+                            Height="20"
+                            Margin="0,0,0,0"
+                            FlowDirection="RightToLeft"
+                            MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown"
+                            MouseEnter="pnlControlBar_MouseEnter"
+                            MouseLeave="pnlControlBar_MouseLeave"
+                            Grid.Row="0">
+
+                    <Button x:Name="btnClose"
+                            Style="{StaticResource controlButtonRev}"
+                            Tag="{StaticResource MainThemeColor3}"
+                            Foreground="{StaticResource MainThemeColor4}"
+                            Click="btnClose_Click">
+                        <fa:IconImage Icon="WindowClose"
+                                      Style="{StaticResource controlButtonIcon}"/>
+
+                    </Button>
+
+                    <Button x:Name="btnMinimize"
+                            Style="{StaticResource controlButtonRev}"
+                            Tag="{StaticResource MainThemeColor3}"
+                            Foreground="{StaticResource MainThemeColor4}"
+                            Click="btnMinimize_Click">
+                        <fa:IconImage Icon="WindowMinimize"
+                                      Style="{StaticResource controlButtonIcon}"/>
+                    </Button>
+                </StackPanel>
+
+                <ContentControl Content="{Binding CurrentChildView}"
+                                Margin="10" Grid.Row="1"/>
+            </Grid>
+
+
+
+            <Grid Grid.Column="0">
+                <Border>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                            <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
+                            <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <StackPanel>
+                    <!--Logo-->
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Height="40"
+                                Margin="10,20,10,20">
+                        <Image Source="/Images/L(256X256).png" Height="40"/>
+                    </StackPanel>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource MainThemeColor5}"
+                                 Command="{Binding ShowLicenseViewCommand}">
+                        <fa:IconImage Icon="DriversLicense" Style="{StaticResource menuButtonIcon}"/>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource MainThemeColor5}"
+                                 Command="{Binding ShowSearchViewCommand}">
+                        <fa:IconImage Icon="Search" Style="{StaticResource menuButtonIcon}"/>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource MainThemeColor5}">
+                        <!--Command="{Binding ShowAccountViewCommand}">-->
+                        <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource MainThemeColor5}">
+                        <!--Command="{Binding ShowAccountViewCommand}">-->
+                        <fa:IconImage Icon="Gear" Style="{StaticResource menuButtonIcon}"/>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource MainThemeColor5}">
+                        <!--Command="{Binding ShowAccountViewCommand}">-->
+                        <fa:IconImage Icon="PowerOff" Style="{StaticResource menuButtonIcon}"/>
+                    </RadioButton>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </Border>
+</Window>

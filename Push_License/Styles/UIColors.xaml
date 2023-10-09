@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Background Colors -->
+    <Color x:Key="secondaryBackColor1">#7b5be6</Color>
+    <Color x:Key="secondaryBackColor2">#5c3acf</Color>
+    <Color x:Key="secondaryBackColor3">#74eedf</Color>
+    <Color x:Key="secondaryBackColor4">#92f5e9</Color>
+    
+    <!-- Theme Colors -->
+    <SolidColorBrush x:Key="MainThemeColor1">#fee500</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor2">#423630</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor3">#7b5be6</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor4">#313345</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor5">#74eedf</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor6">#ffc047</SolidColorBrush>
+    
+    
+    <!-- Event Colors -->
+    <SolidColorBrush x:Key="MainThemeColor3_Brighter">#9a7df9</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor3_Darker">#5c3acf</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor5_Darker">#4cc9ba</SolidColorBrush>
+    <SolidColorBrush x:Key="MainThemeColor5_Brighter">#92f5e9</SolidColorBrush>
+    <SolidColorBrush x:Key="TextNormalColor_Brighter">#3c3c3c</SolidColorBrush>
+    
+
+    <!-- Window Border Colors -->
+    <SolidColorBrush x:Key="WindowBorderColor1">#707070</SolidColorBrush>
+    <SolidColorBrush x:Key="WindowBorderColor2">#505050</SolidColorBrush>
+    
+    <!-- Font Colors -->
+    <SolidColorBrush x:Key="TextInvalidColor" Color="#acacac"/>
+    <SolidColorBrush x:Key="TextNormalColor" Color="#262626"/>
+    <SolidColorBrush x:Key="TextUIColor" Color="#7f7200"/>
+    <SolidColorBrush x:Key="TextInputColor" Color="#404040"/>
+    
+
+</ResourceDictionary>

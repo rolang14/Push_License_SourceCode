@@ -1,0 +1,355 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp">
+
+    <Style x:Key="inputField" TargetType="TextBox">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="Margin" Value="-5,0,0,5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#404040"/>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#707070" Opacity="0.7"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="1,0.1,1,1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="3,3,3,3">
+                        <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="inputIdField" TargetType="TextBox">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="Margin" Value="-5,0,0,5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#404040"/>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#707070" Opacity="0.7"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="1,0.1,1,1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="3,3,0,0">
+                        <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost"/> 
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="inputPassField" TargetType="PasswordBox">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="Margin" Value="-5,0,0,5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#404040"/>
+        <Setter Property="PasswordChar" Value="*"/>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#707070" Opacity="0.7"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="1,0.1,1,1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="0,0,3,3">
+                        <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- Control Button -->
+
+    <Style x:Key="controlButton" TargetType="Button">
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="#74eedf" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"/>
+                        <ColorAnimation To="#7b5be6" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="Transparent" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"/>
+                        <ColorAnimation To="White" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource MainThemeColor5_Darker}"/>
+                <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="controlButtonRev" TargetType="Button">
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource MainThemeColor4}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="#7b5be6" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"/>
+                        <ColorAnimation To="White" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="Transparent" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"/>
+                        <ColorAnimation To="#313345" Duration="0:0:0.15" Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource MainThemeColor3_Darker}"/>
+                <Setter Property="Foreground" Value="{StaticResource MainThemeColor5}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="controlButtonIcon" TargetType="fa:IconImage">
+        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=Button}}"/>
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Height" Value="12"/>
+    </Style>
+    
+    <!-- Menu Button -->
+
+    <!--Menu Button-->
+    <Style x:Key="menuButton" TargetType="RadioButton">
+        <!--Normal button style-->
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="0,5,0,10"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource TextInvalidColor}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderThickness="0,0,0,0"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <!--Hovered button style
+        마우스가 오버되면 하이라이트를 주고 싶다-->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource MainThemeColor3_Brighter}"/>
+                <Setter Property="Foreground" Value="Wheat"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+
+            <!--Activated button style
+            버튼이 체크가 된 상태면(클릭이 되었다면 체크가 된 상태로 간주. 라디오버튼이므로.)-->
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="{StaticResource MainThemeColor3_Darker}"/>
+                <!-- Foreground 색상이 Tag 속성에 따라 변화함. 변수를 스타일에 줄 수 있는 방법. -->
+                <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <!--Menu Button Icon-->
+    <Style x:Key="menuButtonIcon" TargetType="fa:IconImage">
+        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+    </Style>
+
+
+    <Style x:Key="squareButton" TargetType="Button">
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Background" Value="{StaticResource MainThemeColor5}"/>
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource TextInvalidColor}"/>
+                <Setter Property="Foreground" Value="{StaticResource WindowBorderColor1}"/>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsEnabled" Value="True"/>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" Value="{StaticResource MainThemeColor5_Brighter}"/>
+                <Setter Property="Foreground" Value="{StaticResource WindowBorderColor1}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsEnabled" Value="True"/>
+                    <Condition Property="IsPressed" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" Value="{StaticResource MainThemeColor5_Darker}"/>
+                <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="squareButtonIcon" TargetType="fa:IconImage">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Height" Value="12"/>
+    </Style>
+
+    <!-- Fonts -->
+    
+    <Style x:Key="TextGodoB" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#Godo B"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextGodoM" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#Godo M"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextGmarketB" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#Gmarket Sans TTF Bold"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextGmarketM" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#Gmarket Sans TTF Medium"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextGmarketL" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#Gmarket Sans TTF Light"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextYangjin" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#Yangjin"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextKopubB" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#KoPub돋움체_Pro Bold"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextKopubM" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#KoPub돋움체_Pro Medium"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TextKopubL" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource TextNormalColor}"/>
+        <Setter Property="FontFamily" Value="/Fonts/#KoPub돋움체_Pro Light"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+</ResourceDictionary>
